@@ -1,15 +1,14 @@
 <?php
+$db_host = "localhost";
+$db_user = "root";
+$db_password = "";
+$db_name = "universdb";
+$dsn = "mysql:host=$db_host;dbname=$db_name";
 
-$hostName = 'localhost';
-$dbName = '';
-$dbUsername = 'root';
-$dbPassword = '';
-
-$conn = mysqli_connect($hostName, $dbUsername, $dbPassword, $dbName);
-
-if(!$conn){
-    die("connection failed: ". mysqli_connect_error());
-}else{
-    echo "Connected successfully";
-};
-
+try{
+    $conn = new PDO($dsn, $db_user,$db_password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}catch(PDOException $e){
+    $e->getMessage();
+}
+  

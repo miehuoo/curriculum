@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="login-wrapper">
+        <h2>login</h2>
+        <form action="">
+            <div class="input-wrap">
+                <ion-icon name="person" class="login-icon"></ion-icon>
+                <input type="text" class="username-input" name="username" placeholder="username" required>
+            </div>
+            <div class="input-wrap">
+                <ion-icon name="key" class="login-icon"></ion-icon>
+                <input type="password" class="password-input" name="password" placeholder="password" required>
+                <i class="fas fa-eye" id="show-hide"></i>
+            </div>
+            <button>login</button>
+            <div class="forgot-pass">
+                <a href="#">Forgot password?</a>
+            </div>
+        </form>
+    </div>
+    <script>
+        let showToggle = document.getElementById('show-hide');
+        showToggle.addEventListener('click', () => {
+            let passText = document.querySelector('.password-input');
+            if(passText.type === 'password'){
+                passText.type = 'text';
+                showToggle.classList.add('hide');
+            }else{
+                passText.type = 'password';
+                showToggle.classList.remove('hide');
+            }
+        })
+    </script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>

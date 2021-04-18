@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+    --main-color: #0CB8CC;
+    --main--color: #2091AF;
+    --text--gray: #797979;
+    --inside-color: #EB8F2B;
+    --second-color: #EBD7B6;
+    --second--color: #CB321D;
+}
+
+* {
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* user-select: none; */
+}
+body{
+    height: 100vh;
+}
+.login-wrapper{
+    /* border: 1px solid red; */
+    box-shadow: 0 0 10px hsl(0, 3%, 77%);
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+
+}
+.login-wrapper h2{
+    text-align: center;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.input-wrap
+{
+    width: 90%;
+    height: 3em;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px hsl(0, 3%, 77%);
+    /* position: relative; */
+}
+
+.input-wrap .login-icon{
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.input-wrap input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    
+}
+.input-wrap  i#show-hide
+{
+    margin:0 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.password-input:valid ~  i#show-hide{
+    display: block;
+}
+
+i#show-hide:hover:before{
+    content: '\f070';
+}
+i.hide#show-hide:before{
+    content: '\f070';
+}
+
+
+
+.login-wrapper button{
+    width: 90%;
+    height: 3em;
+    margin: 20px auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0CB8CC;
+    color: #ffffff;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-color: #0CB8CC;
+    outline: none;
+}
+
+.login-wrapper .forgot-pass{
+    text-align: center;
+}
+
+.login-wrapper a{
+    text-decoration: none;
+    color: #0CB8CC;
+}
+.login-wrapper a:hover{
+    border-bottom: 2px solid #0CB8CC;
+}
+
+
+
